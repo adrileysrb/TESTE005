@@ -33,12 +33,12 @@ class NameActivity : AppCompatActivity() {
             }
             else {
                 if(edit){
-                    val pessoa = Pessoa(position, etNome.text.toString())
+                    val pessoa = Pessoa(position, binding.etNome.text.toString())
                     databaseHandler.updatePessoa(pessoa)
                     finish()
                 }
                 else {
-                    val pessoa = Pessoa(0, etNome.text.toString())
+                    val pessoa = Pessoa(0, binding.etNome.text.toString())
                     databaseHandler.addPessoa(pessoa)
                     finish()
                 }
